@@ -1,0 +1,124 @@
+:root {
+  --bg: #141519;
+  --card: #1f2630;
+  --circle: #2b3441;
+  --muted: #9aa0ab;
+  --orange: #fb7413;
+  --white: #ffffff;
+}
+
+/* ---------- Container ---------- */
+.container {
+  background-color: var(--card);
+  width: 340px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* ---------- Star ---------- */
+#star {
+  background-color: var(--circle);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+#star img {
+  width: 18px;
+}
+
+/* ---------- Text ---------- */
+#text h1 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+#text p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ---------- Rating Buttons ---------- */
+#rate {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+#rate button {
+  background-color: var(--circle);
+  color: var(--muted);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+#rate button:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+#rate button.active {
+  background-color: #7c8898;
+  color: var(--white);
+}
+
+/* ---------- Submit Button ---------- */
+#submit button {
+  width: 100%;
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 12px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+#submit button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* ---------- Thank You Page ---------- */
+#thankyou img {
+  width: 130px;
+  margin-bottom: 15px;
+}
+#thankyou #selected {
+  background-color: var(--circle);
+  color: var(--orange);
+  padding: 6px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+#thankyou h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+#thankyou p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 420px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #rate button {
+    width: 42px;
+    height: 42px;
+  }
+
+  #thankyou img {
+    width: 120px;
+  }
+}
