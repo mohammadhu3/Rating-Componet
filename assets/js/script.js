@@ -7,7 +7,7 @@ showRating();
 function showRating() {
   container.innerHTML = "";
 
-  // --- Star icon ---
+  // ------ Star icon---------
   const star = document.createElement("div");
   star.id = "star";
   const starImg = document.createElement("img");
@@ -15,7 +15,7 @@ function showRating() {
   star.append(starImg);
   container.append(star);
 
-  // --- Text content ---
+  // ------- Text content --------
   const text = document.createElement("div");
   text.id = "text";
   const h1 = document.createElement("h1");
@@ -26,7 +26,7 @@ function showRating() {
   text.append(h1, p);
   container.append(text);
 
-  // --- Rating buttons (1–5) ---
+  // ------- Rating buttons (1–5) ------
   const rate = document.createElement("div");
   rate.id = "rate";
   container.append(rate);
@@ -39,7 +39,7 @@ function showRating() {
     btn.textContent = numbers[i];
     rate.append(btn);
 
-    // Hover animation handled by JS
+    //------ Hover animation handled by JS------
     btn.addEventListener("mouseenter", () => {
       btn.classList.add("hover");
     });
@@ -47,7 +47,7 @@ function showRating() {
       btn.classList.remove("hover");
     });
 
-    // Select rating
+    //------ Select rating------
     btn.addEventListener("click", () => {
       selected = numbers[i];
       document.querySelectorAll("#rate button").forEach((b) => {
@@ -65,7 +65,7 @@ function showRating() {
   submit.append(submitBtn);
   container.append(submit);
 
-  // Hover animation handled by JS
+  //------- Hover animation handled by JS------
   submitBtn.addEventListener("mouseenter", () => {
     submitBtn.classList.add("hover");
   });
@@ -73,7 +73,7 @@ function showRating() {
     submitBtn.classList.remove("hover");
   });
 
-  // Submit event
+  //----- Submit event-----
   submitBtn.addEventListener("click", () => {
     if (selected) {
       showThank(selected);
@@ -83,7 +83,7 @@ function showRating() {
   });
 }
 
-// ----Thank You Section -----
+// ----Thank You Section -------
 function showThank(rating) {
   container.innerHTML = "";
 
@@ -91,18 +91,18 @@ function showThank(rating) {
   thank.id = "thankyou";
   container.append(thank);
 
-  // Illustration image
+  //------ Illustration image-----
   const img = document.createElement("img");
   img.src = "./assets/img/illustration-thank-you.svg";
   thank.append(img);
 
-  // Selected rating display
+  //------ Selected rating display------
   const selected = document.createElement("div");
   selected.id = "selected";
   selected.textContent = `You selected ${rating} out of 5`;
   thank.append(selected);
 
-  // Thank-you text
+  //---- Thank-you text-----
   const h1 = document.createElement("h1");
   h1.textContent = "Thank you!";
   thank.append(h1);
