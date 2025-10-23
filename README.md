@@ -1,41 +1,37 @@
-# Interactive Rating Component
+# DWWM CEPPIC 2025 – FOAD du 23/10/2025
 
-Ce projet est une petite application front-end réalisée en HTML, CSS et JavaScript.  
-L’objectif était de recréer le composant “rating” de Frontend Mentor à partir des maquettes fournies,  
-en respectant le plus fidèlement possible la mise en page et les effets visuels.
+## Sujet
 
----
+À partir du component **Rating** de *Frontend Mentor*, j’ai réalisé un composant **HTML / CSS / JavaScript** à partir des maquettes fournies dans le dossier *design*, en respectant le plus fidèlement possible l’apparence du modèle.
 
-## Description du projet
-
-L’utilisateur peut donner une note de **1 à 5** selon sa satisfaction.  
-Lorsqu’il clique sur le bouton **Submit**, une carte de remerciement s’affiche avec la note sélectionnée.  
-Tous les éléments (boutons, textes, images...) sont générés dynamiquement avec JavaScript.
-
-J’ai choisi un design sobre avec un fond sombre et un accent orange, comme indiqué dans le guide de style.
+L’objectif était de reproduire un composant de notation simple et esthétique, avec une interaction fluide gérée entièrement en JavaScript.
 
 ---
 
-## Fonctionnalités principales
+## Consignes du projet
 
-- Construction de tout le contenu via **JavaScript** (`document.createElement`)  
-- Animation fluide au survol des boutons **gérée par un event JS** (et non pas avec `:hover`)  
-- Transition entre la partie “notation” et la partie “remerciement”  
-- Responsive design pour mobile et bureau  
-- Code organisé et facile à lire
+- Le survol des éléments numérotés (1 à 5) doit comprendre une **animation fluide et esthétique**.  
+  → L’animation doit être déclenchée **par un event JavaScript** (et non par la pseudo-classe `:hover` en CSS).
 
-> Pour le moment, la version actuelle ne sauvegarde pas la note dans le localStorage.  
-> Chaque rechargement recommence donc depuis le début.
+- Lors du clic sur **Submit**, un message de remerciement doit apparaître avec la note sélectionnée.  
+  (Dans la version actuelle, la note n’est pas encore enregistrée dans le *localStorage*.)
 
----
-
-## Technologies utilisées
-
-- **HTML5** : structure de base (une seule div `.container`)
-- **CSS3** : mise en page, reset, transitions et couleurs  
-- **JavaScript (ES6)** : création du DOM, gestion des événements et logique d’interaction
+- *Bonus optionnel :* La note attribuée peut être stockée dans le `localStorage` du navigateur pour être affichée automatiquement à la réouverture.  
+- *Bonus encore plus optionnel :* Tous les éléments HTML doivent être créés dynamiquement en JavaScript.
 
 ---
 
-## Structure des fichiers
+## Réalisation
 
+Le projet a été développé **sans HTML statique**, à l’exception d’une seule `<div class="container">` dans le fichier principal.  
+Tout le contenu (texte, boutons, images, titres, etc.) est généré par **JavaScript** via `document.createElement`.
+
+Les effets d’animation sont gérés avec des classes CSS ajoutées ou retirées en fonction des événements :
+
+```js
+btn.addEventListener("mouseenter", () => {
+  btn.classList.add("hover");
+});
+btn.addEventListener("mouseleave", () => {
+  btn.classList.remove("hover");
+});
