@@ -1,19 +1,5 @@
 # DWWM CEPPIC 2025 FOAD du 23/10/2025
 
-project/
-│
-├── index.html
-├── assets/
-│   ├── img/
-│   │   ├── icon-star.svg
-│   │   ├── illustration-thank-you.svg
-│   │   └── favicon-32x32.png
-│   ├── css/
-│   │   ├── reset.css
-│   │   └── style.css
-│   └── js/
-│       └── script.js
-
 
 # 🎯 Interactive Rating Component
 
