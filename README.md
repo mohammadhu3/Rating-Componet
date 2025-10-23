@@ -1,19 +1,5 @@
 # DWWM CEPPIC 2025 FOAD du 23/10/2025
 
-project/
-│
-├── index.html
-├── assets/
-│   ├── img/
-│   │   ├── icon-star.svg
-│   │   ├── illustration-thank-you.svg
-│   │   └── favicon-32x32.png
-│   ├── css/
-│   │   ├── reset.css
-│   │   └── style.css
-│   └── js/
-│       └── script.js
-
 
 # 🎯 Interactive Rating Component
 
@@ -25,7 +11,6 @@ L’interface change ensuite pour afficher un message de remerciement.
 ## 🧩 Fonctionnalités
 
 - Création complète des éléments avec **JavaScript (DOM)**  
-- Stockage de la note dans le **localStorage**  
 - Affichage d’une page “Merci” après validation  
 - Design responsive (ordinateur & mobile)  
 - Couleurs sombres et effet de survol sur les boutons
