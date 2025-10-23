@@ -3,7 +3,7 @@ const container = document.querySelector(".container");
 // Always show the rating section on page load
 showRating();
 
-// ========== Rating Section ==========
+//-----Rating Section ------
 function showRating() {
   container.innerHTML = "";
 
@@ -83,7 +83,7 @@ function showRating() {
   });
 }
 
-// ========== Thank You Section ==========
+// ----Thank You Section -----
 function showThank(rating) {
   container.innerHTML = "";
 

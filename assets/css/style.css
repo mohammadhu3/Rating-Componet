@@ -57,10 +57,26 @@
   border-radius: 50%;
   transition: 0.3s;
 }
-#rate button:hover {
+/* #rate button:hover {
   background-color: var(--orange);
   color: var(--white);
+} */
+ 
+/* Hover effects handled by JS */
+#rate button.hover {
+  background-color: #fb7413;
+  color: #fff;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
+
+#submit button.hover {
+  background-color: #fff;
+  color: #fb7413;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
 #rate button.active {
   background-color: #7c8898;
   color: var(--white);
@@ -78,10 +94,10 @@
   letter-spacing: 1px;
   transition: 0.3s;
 }
-#submit button:hover {
+/* #submit button:hover {
   background-color: var(--white);
   color: var(--orange);
-}
+} */
 
 /* ---------- Thank You Page ---------- */
 #thankyou img {
