@@ -11,7 +11,6 @@ L’interface change ensuite pour afficher un message de remerciement.
 ## 🧩 Fonctionnalités
 
 - Création complète des éléments avec **JavaScript (DOM)**  
-- Stockage de la note dans le **localStorage**  
 - Affichage d’une page “Merci” après validation  
 - Design responsive (ordinateur & mobile)  
 - Couleurs sombres et effet de survol sur les boutons
