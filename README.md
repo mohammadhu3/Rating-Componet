@@ -35,3 +35,69 @@ btn.addEventListener("mouseenter", () => {
 btn.addEventListener("mouseleave", () => {
   btn.classList.remove("hover");
 });
+````
+
+Et la transition CSS associée :
+
+```css
+#rate button.hover {
+  background-color: #fb7413;
+  color: #fff;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+```
+
+---
+
+## Fonctionnement
+
+1. L’utilisateur choisit une note entre **1** et **5**.
+2. Le bouton choisi devient actif et change de couleur.
+3. Au clic sur **Submit**, la carte “Thank you” s’affiche avec la note sélectionnée.
+4. (Dans la version avec localStorage, cette note resterait enregistrée après rechargement.)
+
+---
+
+## Technologies utilisées
+
+* **HTML5** : structure minimale (1 div container)
+* **CSS3** : reset, style principal, responsive design, transitions
+* **JavaScript (ES6)** : création dynamique du DOM, gestion des événements et des animations
+
+---
+
+## Structure du projet
+
+```
+index.html
+assets/
+│
+├── css/
+│   ├── reset.css
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+└── img/
+    ├── icon-star.svg
+    ├── illustration-thank-you.svg
+    └── favicon-32x32.png
+```
+
+
+## Résultat attendu
+
+* Interface fidèle à la maquette
+* Animation fluide et naturelle au survol des notes (event JS uniquement)
+* Composant responsive sur mobile et desktop
+* Passage automatique à la vue “Thank you” après validation
+
+---
+
+## Auteur
+
+Projet réalisé dans le cadre de la formation **DWWM CEPPIC 2025 – FOAD**
+Date : *23 octobre 2025*
+Travail personnel réalisé à partir des consignes du formateur.
